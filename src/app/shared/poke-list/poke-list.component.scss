@@ -1,0 +1,92 @@
+@import '../../../config-scss/rem-calc.scss';
+
+$padding: rem-calc(30);
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 40px 0px;
+
+		.pokemon {
+			// position: relative;
+			display: flex;
+      flex-direction:row;
+      justify-content:space-between;
+			
+      
+      padding: $padding;
+      height: rem-calc(193);
+			width: calc(95%);
+			
+			text-decoration: none;
+			
+      &__status{
+   
+        background: #EFEFF2;
+        border-radius: rem-calc(15);
+        
+        h2{
+          font-size: rem-calc(26);
+          font-style: italic;
+          font-weight: 700;
+          font-family: 'Roboto';
+          margin-bottom: rem-calc(15);
+        }
+        ul{
+          display: flex;
+          flex-direction: column;
+          // padding: 0px 0px 0px 1000px;
+          li {
+            font-size: rem-calc(24);
+            font-weight: 400;
+            font-family: 'Roboto';
+            color: #A49D9D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: rem-calc(750);
+
+            margin-bottom: rem-calc(10);
+            
+          }
+          
+          button {	
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            width: 200px;
+            height: 57px;
+            color:rgba(255,255,255,1);
+            cursor: pointer;
+            letter-spacing: 2px;
+            background:#10B87B;
+            
+            &:hover {
+              background-color: black;
+            }
+          }
+        }
+      }
+      &__image{
+        // position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        height: rem-calc(200);
+        width: 300px;
+        // left: rem-calc(10);
+        // bottom: $padding;
+        background: url('../../../assets/bg/Group\ 22.svg') no-repeat;
+        
+        img{
+          width: 180px;
+        }
+      }
+    }
+}
+
+// border-radius: rem-calc(10); caja

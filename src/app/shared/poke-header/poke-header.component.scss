@@ -1,0 +1,12 @@
+@import '../../../config-scss/rem-calc.scss';
+
+:host {
+	header {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 190px;
+				
+		background-color: #262635;
+	}
+}
