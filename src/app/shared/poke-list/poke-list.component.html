@@ -1,28 +1,28 @@
 <poke-search></poke-search>
-<section>
+<section class="listagem">
     <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-    <a class="pokemon" *ngIf="pokemon.status">
+        <a class="pokemon" *ngIf="pokemon.status">
 
-        <section class="pokemon__image" >
-            <img [src]="pokemon.status.sprites.other.dream_world.front_default" 
-            [alt]="pokemon.name">
-        </section>
+            <section class="pokemon__image" >
+                <img [src]="pokemon.status.sprites.other.dream_world.front_default" 
+                [alt]="pokemon.name">
+            </section>
 
-        <section class="pokemon__status" >
+            <section class="pokemon__status" >
 
-            <h2>
-                {{pokemon.name}} 
-                <!-- {{pokemon.status.id}} -->
-            </h2>
+                <h2>
+                    {{pokemon.name}} 
+                    <!-- {{pokemon.status.id}} -->
+                </h2>
 
-            <ul>
-                <li class="desc"  *ngFor="let value of pokemon.status.types"> 
-                    {{value.type.name}}
-                </li>
-                <li><button [routerLink]="['details', pokemon.status.id]" class="btn btn-primaty" (click)="vermas">See more</button>
-                </li>
-                </ul>
-        </section>
-    </a>
+                <ul>
+                    <li class="desc"  *ngFor="let value of pokemon.status.types"> 
+                        {{value.type.name}}
+                    </li>
+                    <li><button [routerLink]="['details', pokemon.status.id]" class="btn btn-primaty" (click)="vermas">See more</button>
+                    </li>
+                    </ul>
+            </section>
+        </a>
     </ng-template>
 </section>

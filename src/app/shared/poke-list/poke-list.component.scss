@@ -1,8 +1,8 @@
 @import '../../../config-scss/rem-calc.scss';
 
 $padding: rem-calc(30);
-
-:host {
+:host{
+.listagem {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -88,6 +88,6 @@ $padding: rem-calc(30);
         }
       }
     }
+  }
 }
-
 // border-radius: rem-calc(10); caja
