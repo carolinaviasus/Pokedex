@@ -1,22 +1,28 @@
-<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-<a class="pokemon">
+<poke-search></poke-search>
+<section>
+    <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+    <a class="pokemon" *ngIf="pokemon.status">
 
-    <section class="pokemon__image">
-        <img src="../../../assets/image 4.png" alt="pokemonn">
-    </section>
+        <section class="pokemon__image" >
+            <img [src]="pokemon.status.sprites.other.dream_world.front_default" 
+            [alt]="pokemon.name">
+        </section>
 
-    <section class="pokemon__status">
+        <section class="pokemon__status" >
 
-        <h2>
-            {{ pokemon.name }}
-        </h2>
+            <h2>
+                {{pokemon.name}} 
+                <!-- {{pokemon.status.id}} -->
+            </h2>
 
-        <ul>
-            <li class="desc"> It is tough enough yo run right through the night, and it is also a hard worker, but it is still just a
-                youngster. </li>
-            <li><button class="btn btn-primaty" (click)="vermas">See more</button>
-            </li>
-            </ul>
-    </section>
-</a>
-</ng-template>
+            <ul>
+                <li class="desc"  *ngFor="let value of pokemon.status.types"> 
+                    {{value.type.name}}
+                </li>
+                <li><button [routerLink]="['details', pokemon.status.id]" class="btn btn-primaty" (click)="vermas">See more</button>
+                </li>
+                </ul>
+        </section>
+    </a>
+    </ng-template>
+</section>
